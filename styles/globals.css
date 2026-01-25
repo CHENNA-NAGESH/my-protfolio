@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "home";
+  src: url("../public/fonts/EarthOrbiter-YZ12.otf");
+}
+
+@font-face {
+  font-family: "nav";
+  src: url("../public/fonts/Agustina-Signature.otf");
+}
+
+@layer utilities {
+  @variants responsive {
+      .text-shadow {
+        text-shadow: 1px 1px 2px black;
+      }
+      .text-shadow-md {
+        text-shadow: 2px 2px 4px black;
+      }
+      .text-shadow-lg {
+        text-shadow: 4px 4px 8px black;
+      }
+      .text-shadow-none {
+        text-shadow: none;
+      }
+  } 
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hide-scroll {
+  opacity: 0;
+  pointer-events: none;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* LOADER */
+.lds-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Burguer */
+.myBurguer {
+  width: 36px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: all .2s ease-in-out;
+}
+
+.myBurguer::before,
+.myBurguer::after {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: all .2s ease-in-out;
+}
+
+.myBurguer::before {
+  transform: translateY(-8px);
+}
+
+.myBurguer::after {
+  transform: translateY(8px);
+}
+
+.menuopen .myBurguer {
+  background: rgba(0,0,0,0);
+  transform: translateX(-50px);
+}
+
+.menuopen .myBurguer::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menuopen .myBurguer::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
