@@ -23,7 +23,7 @@ const projects = [
   {
     link: "https://chromewebstore.google.com/detail/ghpijecphffmiffibgahodipapkhnebc?utm_source=item-share-cb",
     color: "#FF7A00",
-    title: "AITextSummarizer",
+    title: "AI Text Summarizer",
     description:
       "AI Text Summarizer is a browser-based extension designed to help users quickly understand long or complex text. It analyzes selected content on any webpage in real time and generates clear, concise summaries, helping users save time, improve readability, and grasp key ideas without leaving the page.",
     techs: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js"],
