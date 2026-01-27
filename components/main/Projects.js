@@ -3,22 +3,23 @@ import { useMediaQuery } from "../../lib/useMediaQuery";
 import ProjectsTitle from "./projects/ProjectsTitle";
 
 const projects = [
-  // {
-  //   link: "https://ai-subjective-exam-evaluator.vercel.app/",
-  //   color: "#5c16c5",
-  //   title: "AI-Exam-Evaluation-System",
-  //   description:
-  //     "The AI-Based Subjective Evaluation System is a web platform that uses Artificial Intelligence to automatically evaluate long-form (descriptive) student answers. It helps educators save time and ensures consistent, unbiased grading using NLP-based analysis.",
-  //   techs: [
-  //     "React",
-  //     "Node.js",
-  //     "Express.js",
-  //     "MongoDB",
-  //     "Gemini Generative AI",
-  //   ],
-  //   gitLink: "https://github.com/seethinajayadileep/AI-Exam-Evaluation-System",
-  //   bgPath: "/SubjectiveExamEvaluator.png",
-  // },
+  {
+    link: "https://github.com/CHENNA-NAGESH/Gesture-Detection/tree/main",
+    color: "#5c16c5",
+    title: "Gesture-Detection",
+    description:
+      "The AI-Based Hand Gesture Recognition System is a real-time computer vision application that detects and classifies user hand gestures using a pretrained deep learning model trained with Google Teachable Machine. The system captures live video through a webcam, detects hand landmarks using MediaPipe, and predicts gestures from the extracted hand region. This approach enables accurate, efficient, and touch-free interaction and can be applied in areas such as human–computer interaction, sign language recognition, and gesture-based control systems.",
+    techs: [
+      "Python",
+      "OpenCV",
+      "MediaPipe",
+      "TensorFlow / Keras",
+      "Google Teachable Machine",
+    ],
+      
+    gitLink: "https://github.com/CHENNA-NAGESH/Gesture-Detection/tree/main",
+    bgPath: "/gestures.png",
+  },
 
   {
     link: "https://chromewebstore.google.com/detail/ghpijecphffmiffibgahodipapkhnebc?utm_source=item-share-cb",
