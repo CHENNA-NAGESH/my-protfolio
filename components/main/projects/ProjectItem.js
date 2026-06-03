@@ -55,7 +55,7 @@ export default function ProjectItem({ link, color, title, description, techs, gi
                     <p className="font-home font-semibold text-sm pb-2">Featured Project</p>
                     <h1 className="font-bold font-home py-2 text-lg">{title}</h1>
                     <div style={md ? {backgroundColor: 'inherit', padding: 0} : {backgroundColor: color, padding: '24px'}} className={`${md ? 'ml-0' : inverted ? '-mr-12' : '-ml-12'} rounded-sm flex my-2`}>
-                        <p className="font-semibold">{description}</p>
+                        <p className="font-semibold text-left">{description}</p>
                     </div>
                     <div className={`${inverted ? 'justify-start' : 'justify-end'} flex flex-wrap self-end my-2 w-full`}>
                         {techs.map((tech, index) => <p key={index} className={`${inverted ? 'pr-4' : 'pl-4'} font-home text-sm font-semibold`}>{tech}</p>)}
