@@ -45,7 +45,7 @@ const projects = [
     bgPath: "/washore.png",
   },
   {
-    link: "https://github.com/CHENNA-NAGESH/focus-breaker-landing",
+    link: "https://chromewebstore.google.com/detail/aeomblmibpegefnmpkmnjeebcbjbgeai?utm_source=item-share-cb",
     color: "#1ed760",
     title: "Focus Breaker",
     description:
