@@ -44,6 +44,17 @@ const projects = [
     gitLink: "https://github.com/CHENNA-NAGESH/Washore",
     bgPath: "/washore.png",
   },
+  {
+    link: "https://github.com/CHENNA-NAGESH/focus-breaker-landing",
+    color: "#1ed760",
+    title: "Focus Breaker",
+    description:
+      "Focus Breaker is a premium, privacy-focused Chrome Extension (Manifest V3) that curbs website addiction. It redirects blocked sites to an interactive cosmic screen with a guided breathing orb, concentric ripples, and 3D cursor-parallax stars to encourage mindful focus. Built with JavaScript, CSS, and Chrome Extension APIs.",
+    techs: ["Manifest V3", "JavaScript", "CSS3", "HTML5"],
+
+    gitLink: "https://github.com/CHENNA-NAGESH/focus-breaker-landing",
+    bgPath: "/Focus.jpeg",
+  },
 ];
 
 export default function Projects() {
