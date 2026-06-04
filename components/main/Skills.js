@@ -53,11 +53,11 @@ const skills = [
 ];
 
 const divVariants = {
-  hidden: { y: 100, opacity: 0 },
+  hidden: { y: 60, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.4 },
+    transition: { duration: 0.35 },
   },
 };
 
@@ -87,6 +87,7 @@ export default function Skills() {
   return (
     <section id="skills" className="flex w-full justify-center items-center">
       <motion.div
+        ref={ref}
         variants={divVariants}
         initial="hidden"
         animate={controls}
@@ -101,7 +102,6 @@ export default function Skills() {
 
         <div ref={skillsDivRef}>
           <div
-            ref={ref}
             className="p-4 py-8 flex flex-wrap justify-center max-w-4xl text-neutral-800 dark:text-white transition-colors duration-300"
           >
             {skills.map((skill, index) => (
