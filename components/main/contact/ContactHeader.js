@@ -11,7 +11,7 @@ const divVariants = {
     scale: 1,
     opacity: 1,
     transition: {
-      duration: 0.6,
+      duration: 0.4,
     },
   },
 };

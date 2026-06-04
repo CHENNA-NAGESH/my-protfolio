@@ -11,7 +11,7 @@ const textVariants = {
         y: 0,
         opacity: 1,
         transition: {
-            duration: 0.6
+            duration: 0.4
         }
     }
 }
@@ -35,5 +35,5 @@ export default function ProjectsTitle() {
         initial="hidden"
         animate={controls}
         ref={ref}
-        className="text-4xl sm:text-6xl text-white font-home font-bold pb-8">PROJECTS</motion.h1>
+        className="text-4xl sm:text-6xl text-neutral-800 dark:text-white transition-colors duration-300 font-home font-bold pb-8">PROJECTS</motion.h1>
 }

@@ -16,7 +16,7 @@ const projects = [
       "TensorFlow / Keras",
       "Google Teachable Machine",
     ],
-      
+    isAi: true,
     gitLink: "https://github.com/CHENNA-NAGESH/Gesture-Detection/tree/main",
     bgPath: "/gestures.png",
   },
@@ -28,6 +28,7 @@ const projects = [
     description:
       "AI Text Summarizer is a browser-based extension designed to help users quickly understand long or complex text. It analyzes selected content on any webpage in real time and generates clear, concise summaries, helping users save time, improve readability, and grasp key ideas without leaving the page.",
     techs: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js"],
+    isAi: true,
     gitLink: "https://github.com/CHENNA-NAGESH/Ai-Text-Summarizer",
     bgPath: "/Summarizer.png",
   },
@@ -40,7 +41,7 @@ const projects = [
       "Washore is an AI-based beach monitoring system designed to detect littering activities along coastal areas. Using computer vision, the system identifies litter-related actions on beaches and automatically alerts marine authorities to enable timely intervention and cleanup.",
 
     techs: ["Python", "YOLO Object Detection", "Computer Vision"],
-
+    isAi: true,
     gitLink: "https://github.com/CHENNA-NAGESH/Washore",
     bgPath: "/washore.png",
   },
@@ -51,7 +52,7 @@ const projects = [
     description:
       "Focus Breaker is a premium, privacy-focused Chrome Extension (Manifest V3) that curbs website addiction. It redirects blocked sites to an interactive cosmic screen with a guided breathing orb, concentric ripples, and 3D cursor-parallax stars to encourage mindful focus. Built with JavaScript, CSS, and Chrome Extension APIs.",
     techs: ["Manifest V3", "JavaScript", "CSS3", "HTML5"],
-
+    isAi: false,
     gitLink: "https://github.com/CHENNA-NAGESH/focus-breaker-landing",
     bgPath: "/Focus.jpeg",
   },
@@ -65,7 +66,7 @@ export default function Projects() {
       id="projects"
       className="flex justify-center items-center w-full mt-8"
     >
-      <div className="max-w-7xl w-full flex flex-col justify-center items-center z-[9999] mt-14 overflow-hidden">
+      <div className="max-w-7xl w-full flex flex-col justify-center items-center z-[9999] mt-14 p-6 sm:p-10 section-hover-highlight">
         <ProjectsTitle />
         {projects.map((project, index) => (
           <ProjectItem
@@ -77,6 +78,7 @@ export default function Projects() {
             techs={project.techs}
             gitLink={project.gitLink}
             bgPath={project.bgPath}
+            isAi={project.isAi}
             index={index}
             md={md}
           />

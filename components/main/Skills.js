@@ -40,7 +40,7 @@ const skills = [
   { name: "XML", Icon: FaCode, color: "#f16529" },
   { name: "SQL", Icon: SiMysql, color: "#00758f" },
   { name: "Git", Icon: SiGit, color: "#f1502f" },
-  { name: "GitHub", Icon: SiGithub, color: "#ffffff" },
+  { name: "GitHub", Icon: SiGithub, color: "currentColor" },
   { name: "Spring", Icon: SiSpring, color: "#6db33f" },
   { name: "React", Icon: SiReact, color: "#61dafb" },
   { name: "Postman", Icon: SiPostman, color: "#ff6c37" },
@@ -57,7 +57,7 @@ const divVariants = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.8 },
+    transition: { duration: 0.4 },
   },
 };
 
@@ -90,11 +90,11 @@ export default function Skills() {
         variants={divVariants}
         initial="hidden"
         animate={controls}
-        className="max-w-7xl w-full flex flex-col items-center mt-8"
+        className="max-w-7xl w-full flex flex-col items-center mt-8 p-6 sm:p-10 section-hover-highlight"
       >
         <h1
           ref={titleRef}
-          className="font-home font-bold text-4xl sm:text-6xl text-white"
+          className="font-home font-bold text-4xl sm:text-6xl text-neutral-800 dark:text-white transition-colors duration-300"
         >
           SKILLS
         </h1>
@@ -102,7 +102,7 @@ export default function Skills() {
         <div ref={skillsDivRef}>
           <div
             ref={ref}
-            className="p-4 py-8 flex flex-wrap justify-center max-w-4xl text-white"
+            className="p-4 py-8 flex flex-wrap justify-center max-w-4xl text-neutral-800 dark:text-white transition-colors duration-300"
           >
             {skills.map((skill, index) => (
               <SkillsItem

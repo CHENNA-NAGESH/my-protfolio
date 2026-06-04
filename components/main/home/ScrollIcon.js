@@ -14,6 +14,18 @@ export default function ScrollIcon() {
         }
     }
 
+    const scrollToHome = () => {
+        const homeEl = document.getElementById("home");
+        if (homeEl) {
+            const rect = homeEl.getBoundingClientRect();
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            window.scrollTo({
+                top: rect.top + scrollTop,
+                behavior: "smooth"
+            });
+        }
+    };
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
         return () => {
@@ -25,10 +37,11 @@ export default function ScrollIcon() {
         <div className='flex h-screen justify-center items-end -mt-16 sm:-mt-8 group font-home'>
             <div
                 ref={scrollIconRef}
-                className='flex items-center px-2 justify-center group-hover:scale-125 opacity-100 transition-all animate-bounce'
+                onClick={scrollToHome}
+                className='flex items-center px-2 justify-center group-hover:scale-125 opacity-100 transition-all animate-bounce cursor-pointer'
             >
                 <BsFillMouseFill color='white' size={35}/>
-                <h1 className='text-white pl-2'>SCROLL</h1>
+                <h1 className='text-white pl-2 select-none'>SCROLL</h1>
             </div>
         </div>
     )

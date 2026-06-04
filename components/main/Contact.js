@@ -50,11 +50,11 @@ export default function Contact() {
       id="contact"
       className="mt-16 w-full flex flex-col items-center justify-center p-0"
     >
-      <div className="relative max-w-7xl text-white font-home p-2 sm:p-8 mb-24 z-[9999] flex flex-col justify-center items-center text-center">
+      <div className="relative max-w-7xl text-neutral-800 dark:text-white transition-colors duration-300 font-home p-6 sm:p-10 mb-24 z-[9999] flex flex-col justify-center items-center text-center section-hover-highlight">
         <ContactHeader />
         <form
           onSubmit={handleSubmit}
-          className="flex w-full flex-col text-black font-sans relative mt-0 sm:mt-4"
+          className="flex w-full flex-col font-sans relative mt-0 sm:mt-4 text-black dark:text-white"
         >
           <input
             required
@@ -63,7 +63,7 @@ export default function Contact() {
             }}
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="outline-none w-full p-2 mt-2 border-2 rounded-md"
+            className="outline-none w-full p-2 mt-2 border-2 border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-black dark:text-white rounded-md placeholder-neutral-500"
             type="text"
             placeholder="Your name"
           />
@@ -73,7 +73,7 @@ export default function Contact() {
             }}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="outline-none w-full p-2 mt-2 border-2 rounded-md"
+            className="outline-none w-full p-2 mt-2 border-2 border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-black dark:text-white rounded-md placeholder-neutral-500"
             type="email"
             placeholder="Your email"
             required
@@ -85,13 +85,13 @@ export default function Contact() {
             required
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="outline-none w-full p-2 mt-2 border-2 rounded-md resize-none"
+            className="outline-none w-full p-2 mt-2 border-2 border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-black dark:text-white rounded-md placeholder-neutral-500 resize-none"
             type="text"
             placeholder='Hi, I think we need a redesign for our products at "Company ZWY". How soon can we discuss this?'
           />
           {sent == "idle" ? (
             <input
-              className="mt-6 outline-none w-2/4 self-center p-2 border-2 rounded-md font-bold cursor-pointer text-white font-home hover:bg-white hover:text-black transition-all"
+              className="mt-6 outline-none w-2/4 self-center p-2 border-2 border-neutral-900 dark:border-white rounded-md font-bold cursor-pointer text-neutral-900 dark:text-white font-home hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all bg-transparent"
               type="submit"
               placeholder="Your email"
             />
@@ -114,7 +114,7 @@ export default function Contact() {
               animate="visible"
               className="mt-6 self-center justify-center text-center"
             >
-              <h2 className="text-white font-home font-semibold text-xl sm:text-2xl">
+              <h2 className="text-green-600 dark:text-green-400 font-home font-semibold text-xl sm:text-2xl">
                 Message Sent!
               </h2>
             </motion.div>
@@ -133,12 +133,11 @@ export default function Contact() {
         </form>
       </div>
       <svg
-        className="z-[9999] -mb-[1px]"
+        className="z-[9999] -mb-[1px] text-white dark:text-neutral-900 transition-colors duration-300 fill-current"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 319"
       >
         <path
-          fill="#fff"
           fillOpacity="1"
           d="M0,0L36.9,0L73.8,32L110.8,256L147.7,32L184.6,96L221.5,224L258.5,96L295.4,32L332.3,224L369.2,288L406.2,160L443.1,256L480,320L516.9,128L553.8,64L590.8,192L627.7,96L664.6,192L701.5,0L738.5,160L775.4,128L812.3,256L849.2,128L886.2,256L923.1,160L960,0L996.9,128L1033.8,192L1070.8,128L1107.7,256L1144.6,96L1181.5,256L1218.5,192L1255.4,192L1292.3,160L1329.2,32L1366.2,96L1403.1,96L1440,32L1440,320L1403.1,320L1366.2,320L1329.2,320L1292.3,320L1255.4,320L1218.5,320L1181.5,320L1144.6,320L1107.7,320L1070.8,320L1033.8,320L996.9,320L960,320L923.1,320L886.2,320L849.2,320L812.3,320L775.4,320L738.5,320L701.5,320L664.6,320L627.7,320L590.8,320L553.8,320L516.9,320L480,320L443.1,320L406.2,320L369.2,320L332.3,320L295.4,320L258.5,320L221.5,320L184.6,320L147.7,320L110.8,320L73.8,320L36.9,320L0,320Z"
         ></path>

@@ -31,9 +31,9 @@ const techs = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-white w-full">
+    <footer className="relative bg-white dark:bg-neutral-900 transition-colors duration-300 w-full text-neutral-900 dark:text-neutral-100">
       <div>
-        <div className="flex w-full justify-center border-t-[1px] border-black">
+        <div className="flex w-full justify-center border-t-[1px] border-neutral-200 dark:border-neutral-800">
           <p className="p-2 pt-3 text-xs text-bold">
             © Copyright | Chenna Nagesh{" "}
           </p>
